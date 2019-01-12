@@ -1,11 +1,11 @@
 const express = require('express');
 const app = express();
+const router = require('./fcc-timestamp');
+const port = 3000;
 
-app.get('/', function(req, res) {
-    res.send('hello, world!');
-});
 
-app.listen(3000, function() {
-    console.log('Listening on port 3000!');
-});
 
+// NOTE: to use template strings, use *backticks* not ''
+app.listen(port, () => console.log(`Listening on port ${port}!`));
+
+app.use('./fcc-timestamp', router);
