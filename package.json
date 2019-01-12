@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.1",
   "description": "Timestamp validation project for FCC API/Microservices certification",
-  "main": "timestamp.js",
+  "main": "server.js",
   "dependencies": {
     "express": "4.x"
   },
