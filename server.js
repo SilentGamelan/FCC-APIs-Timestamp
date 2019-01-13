@@ -13,8 +13,6 @@ app.use((req, res, next) => {
     next();
 });
 
-app.get('/', function(req, res) {
-    res.send('Validate your timestamp at /api/timestamp/[yourTimestamp]');
-});
 
-app.use('/api/timestamp', router);
+
+app.use(router);
