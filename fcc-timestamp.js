@@ -7,8 +7,24 @@ router.get('/', function(req, res, next) {
     next();
 });
 
-router.get('/api/timestamp/:timeToValidate', function(req, res) {
-    res.send(req.params.timeToValidate);
+router.get('/api/timestamp/:userTime', function(req, res, next) {
+    let userTime = req.params.userTime;
+    
+    if(userTime == null && userTime == "") {
+        next(res.send(userTime = new Date()));
+    }
+
+    userTime = new Date(userTime);
+
+    if(userTime === NaN) {
+        next(res.send({"error": "Invalid Date"}));
+    } else {
+        next(res.send({
+            "unix"  : userTime.getTime(),
+            "utc"   : userTime.toUTCString()
+        }));
+    }
+
 });
 
 
