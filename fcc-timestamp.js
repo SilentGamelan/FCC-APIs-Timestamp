@@ -2,11 +2,18 @@ const express = require('express');
 const router = express.Router();
 
 
-router.get('/', function(req, res, next) {
-    res.send('Validate your timestamp at /api/timestamp/[yourTimestamp]');
-    next();
+// http://expressjs.com/en/starter/basic-routing.html
+router.get("/", function (req, res) {
+  res.sendFile(__dirname + '/views/index.html');
 });
 
+
+// your first API endpoint... 
+router.get("/api/hello", function (req, res) {
+  res.json({greeting: 'hello API'});
+});
+
+// Timestamp validation via routing parameters
 router.get('/api/timestamp/:userTime', function(req, res, next) {
     let userTime = req.params.userTime;
     

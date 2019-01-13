@@ -1,30 +1,32 @@
 {
-  "name": "fcc-apis-timestamp",
-  "private": true,
-  "version": "0.1.0",
-  "description": "Timestamp validation project for FCC API/Microservices certification",
-  "main": "server.js",
-  "dependencies": {
-    "express": "4.x"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
+	"name": "fcc-apis-timestamp",
+	"version": "0.1.0",
+	 "description": "Timestamp validation project for FCC API/Microservices certification",
+	"main": "server.js",
+	"scripts": {
+		"start": "node server.js"
+	},
+	"dependencies": {
+		"express": "^4.12.4",
+		"cors": "^2.8.0"
+	},
+	"engines": {
+		"node": "4.4.5"
+	},
+ "repository": {
     "type": "git",
     "url": "git+https://github.com/SilentGamelan/FCC-APIs-Timestamp.git"
   },
-  "keywords": [
-    "node",
-    "time",
+	"keywords": [
+		"node",
+		"hyperdev",
+		"express",
+		"freecodecamp",
+     "time",
     "timestamp",
     "json",
     "validator"
-  ],
-  "author": "silentgamelan",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/SilentGamelan/FCC-APIs-Timestamp/issues"
-  },
-  "homepage": "https://github.com/SilentGamelan/FCC-APIs-Timestamp#readme"
+	],
+	"license": "MIT",
+  "author": "silentgamelan"
 }
