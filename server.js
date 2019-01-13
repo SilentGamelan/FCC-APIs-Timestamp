@@ -14,7 +14,7 @@ app.use((req, res, next) => {
 });
 
 app.get('/', function(req, res) {
-    res.send('hello, world!');
+    res.send('Validate your timestamp at /api/timestamp/[yourTimestamp]');
 });
 
 app.use('/api/timestamp', router);
