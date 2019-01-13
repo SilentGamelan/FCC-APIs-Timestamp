@@ -1,7 +1,7 @@
 {
   "name": "fcc-apis-timestamp",
   "private": true,
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Timestamp validation project for FCC API/Microservices certification",
   "main": "server.js",
   "dependencies": {
